@@ -1,0 +1,65 @@
+/* Tabs.css */
+
+.tabs-container {
+  width: 100%;
+}
+
+.tabs-header {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.tab-header {
+  padding: 10px 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.tab-header.active {
+  background-color: #eee;
+  font-weight: bold;
+}
+
+.tab-header:hover {
+  background-color: #ddd;
+}
+
+.tabs-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content-enter {
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+.tab-content-exit {
+  opacity: 1;
+  animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
